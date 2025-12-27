@@ -1,0 +1,602 @@
+﻿<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+<title>Concepts of Probability </title>
+
+<link href="bootstrap.css" rel="stylesheet">
+<link href="homedesign.css" rel="stylesheet">
+<link href="mcqcheck.css" rel="stylesheet">
+<style>
+ *{
+    margin:0px;
+    padding:0px;
+  } 
+
+body{
+  background-color:white;
+}
+
+#myDIV a:hover {
+    background-color: #337ab7;
+    color: white;
+  }
+ .active {
+  background-color: #337ab7;
+  color: white;
+ }
+  .btn.active
+  {
+  color: white;
+}
+</style>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  js code to control answers and explanations MMMMMMMMMMMMMMMMMMMMMMM-->
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+
+<script>let mainNav=document.getElementById("js-menu");let navBarToggle=document.getElementById("js-navbar-toggle");navBarToggle.addEventListener("click",function(){mainNav.classList.toggle("active")});</script>
+
+<script type="text/javascript">function toggle_visibility(b){var a=document.getElementById(b);if(a.style.display=="block"){a.style.display="none"}else{a.style.display="block"}}</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122097904-1"></script>
+
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","UA-122097904-1");</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-5912385878283070",enable_page_level_ads:true});</script>
+
+</head>
+
+<!--MMMMMMMM  HTML BODY STARTS HERE  MMMMM-->
+<body>
+
+<!--NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN-->
+<!--NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN  Quiz Begins Here    NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN-->
+<!--NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN-->
+
+<!--div class = "col-md-7">
+<div class="content"-->
+
+<center>
+
+<!--XXXXXXXXXXXXXXXXXXXX outer table: for titles XXXXXXXXXXXXXXXXXX-->
+<table align = center width="700" border="1" cellpadding="0" cellspacing="0"  bordercolor=purple>
+<tr><td>
+
+<!--VVVVVVVVVVVVVVV   Assessment Title Information     VVVVVVVVVVVVVVVV-->
+
+<h4 style="text-align: center; padding-top:10px;padding-bottom:0px;"><b>MAT121 Practice Exercises</b></h4> 
+<h3 style="text-align: center; padding-top:0px;padding-bottom:10px;"><b>Discrete Random Variables: Binomial and Poisson Distributions</b></h3> 
+<h5 style="text-align: center; padding-top:0px;padding-bottom:10px;">Instr. C. Peng</h5> 
+
+<!--XXXXXXXXXXXXXXXXXXX inner table: HTML contents XXXXXXXXXXXXXXXXXXXXXX-->
+  <center>
+  <div class="container sec">
+  <table align = center width="600" border="0" cellpadding="0" cellspacing="0"  bordercolor=purple>
+  <tbody>
+    <tr>
+    <td>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVVVVVVV         Quiz Description        VVVVVVVVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<p style="text-align: left; padding-top:15px; padding-bottom:10px; font-size:15px; color:navy;">Please show your work before checking the answer and explanations. The exam questions will be similar to these exercise problems.</p>
+<BR>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem1      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 1.</b> &nbsp; A biased coin has a 70% chance of landing heads. If X = 1 for heads and X = 0 for tails, what is P(X = 0)?
+</span>
+<BR>
+<p class = "options"><BR>
+a) 0.3<BR>
+b) 0.7<BR>
+c) 0.49<BR>
+d) 0.21<BR>
+</p>
+</p>
+<BR>
+
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q1');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q1" class="showanswer" style="display: none;" > <b>Ans</b> : a) 0.3<br/>
+<p> <b>Explanation</b>:  For Bernoulli(p), P(X=0) = 1 - p. Here p = 0.7, so P(X=0) = 0.3.</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 2      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 2.</b> &nbsp; &nbsp; Given a Bernoulli distribution with p = 0.6, what are its mean (μ) and variance (σ²)?
+</span>
+<BR>
+<p class = "options"><BR>
+a) μ=0.6, σ²=0.24<BR>
+b) μ=0.6, σ²=0.4<BR>
+c) μ=0.4, σ²=0.24<BR>
+d) μ=0.4, σ²=0.6<BR>
+</p>
+</p>
+<BR>
+
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q2');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q2" class="showanswer" style="display: none;" > <b>Ans</b> :  a) μ=0.6, σ²=0.24 <br/>
+<p> <b>Explanation</b>:  For Bernoulli(p): Mean = p = 0.6. Variance = p(1-p) = 0.6 * 0.4 = 0.24.</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 3      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 3.</b> &nbsp; Which of the following is a Bernoulli trial?
+</span>
+<BR>
+<p class = "options"><BR>
+a) Rolling a die and recording the outcome<BR>
+b) Flipping a coin once and recording heads/tails<BR>
+c) Drawing a card from a deck<BR>
+d) Measuring the height of a person<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q3');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q3" class="showanswer" style="display: none;" > <b>Ans</b> : b) Flipping a coin once and recording heads/tails <br/>
+<p> <b>Explanation</b>:  A Bernoulli trial has exactly two mutually exclusive outcomes (success/failure) for a single event.</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 4      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 4.</b> &nbsp; The probability mass function for a Binomial(n,p) distribution using factorial notation is:
+</span>
+
+<p class = "options"><BR>
+a) P(X=k) = [n!/(k!(n-k)!)] * p^k * (1-p)^(n-k) <BR>
+b) P(X=k) = [n!/(k!(n-k)!)] * p^(n-k) * (1-p)^k<BR>
+c) P(X=k) = p^k * (1-p)^(n-k)<BR>
+d) P(X=k) = (λ^k * e^(-λ))/k!<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q4');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q4" class="showanswer" style="display: none;" > <b>Ans</b> :  a) P(X=k) = [n!/(k!(n-k)!)] * p^k * (1-p)^(n-k) <br/>
+<p> <b>Explanation</b>: This is the standard Binomial PMF formula with factorial notation for combinations.</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 5      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 5.</b> &nbsp; A student guesses on a 10-question true/false quiz (p=0.5). What is P(exactly 8 correct)?
+</span>
+<BR>
+
+<p class = "options"><BR>
+a) 0.0439<BR>
+b) 0.1209<BR>
+c) 0.0440<BR>
+d) 0.0107<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q5');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q5" class="showanswer" style="display: none;" > <b>Ans</b> :  a) 0.0439 <br/>
+<p> <b>Explanation</b>: n=10, k=8, p=0.5. P(X=8) = [10!/(8!2!)](0.5)^8(0.5)^2 = 45(0.00390625)(0.25) ≈ 0.0439.
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+    
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 6      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 6.</b> &nbsp; In 20 independent trials with success probability 0.3, what is the expected number of successes?
+</span>
+<BR>
+<p class = "options"><BR>
+a) 6 <BR>
+b) 10 <BR>
+c) 4.2 <BR>
+d) 14 <BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q6');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q6" class="showanswer" style="display: none;" > <b>Ans</b> :  a) 6 <br/>
+<p> <b>Explanation</b>: For Binomial(n,p), mean = n*p = 20*0.3 = 6.
+
+
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 7      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 7.</b> &nbsp; For a Binomial(15, 0.4) distribution, the variance is:
+</span>
+<BR>
+
+<p class = "options"><BR>
+a) 6 <BR>
+b) 3.6 <BR>
+c) 9 <BR>
+d) 2.4 <BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q7');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q7" class="showanswer" style="display: none;" > <b>Ans</b> : b) 3.6 <br/>
+<p> <b>Explanation</b>:  Variance = n*p*(1-p) = 15*0.4*0.6 = 3.6
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 8      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 8.</b> &nbsp; Which scenario is NOT well-modeled by a binomial distribution?
+</span>
+<BR>
+
+<p class = "options"><BR>
+a) Number of defective items in a batch of 50 <BR>
+b) Number of heads in 100 coin flips <BR>
+c) Number of emails you receive in an hour <BR>
+d) Number of correct answers on a multiple-choice test (guessing) <BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q8');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q8" class="showanswer" style="display: none;" > <b>Ans</b> : c) Number of emails you receive in an hou <br/>
+<p> <b>Explanation</b>:  Emails per hour is better modeled by Poisson distribution (events over time). Binomial requires fixed number of trials.
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 9      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 9.</b> &nbsp; If X ~ Binomial(n=5, p=0.2), what is P(X ≤ 2) expressed using the binomial PMF?
+</span>
+<BR>
+
+<p class = "options"><BR>
+a) Σ[k=0 to 2] [5!/(k!(5-k)!)] * (0.2)^k * (0.8)^(5-k) <BR>
+b) 1 - [5!/(3!2!)](0.2)^3(0.8)^2 <BR>
+c) [5!/(2!3!)] * (0.2)^2 * (0.8)^3 <BR>
+d) 1 - Σ[k=3 to 5] [5!/(k!(5-k)!)] * (0.2)^k * (0.8)^(5-k) <BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q9');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q9" class="showanswer" style="display: none;" > <b>Ans</b> :  a) Σ[k=0 to 2] [5!/(k!(5-k)!)] * (0.2)^k * (0.8)^(5-k) <br/>
+<p> <b>Explanation</b>: P(X ≤ 2) = P(X=0) + P(X=1) + P(X=2), each calculated using the binomial PMF with factorial notation.
+</p></div><br/>
+</font>
+</p>
+<BR>
+    
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 10    VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 10.</b> &nbsp; The probability mass function for Poisson(λ) is:
+</span>
+<BR>
+
+<p class = "options"><BR>
+a) P(X=k) = (λ^k * e^(-λ))/k! <BR> 
+b) P(X=k) = [n!/(k!(n-k)!)] * p^k * (1-p)^(n-k) <BR>
+c) P(X=k) = p*(1-p)^(k-1) <BR>
+d) P(X=k) = e^(-λ) * λ^k <BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q10');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q10" class="showanswer" style="display: none;" > <b>Ans</b> : D <br/>
+<p> <b>Explanation</b>: For a continuous distribution, the probability of selecting any arbitrary number is ALWAYS ZERO.</center>
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+
+
+
+    
+    
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+
+
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem1      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 11.</b> &nbsp;Accidents occur at an intersection at an average rate of 2 per month. What is P(exactly 3 accidents in a month)?
+</span>
+    
+<BR>
+<p class = "options"><BR>
+a) (e^(-2) * 2^3)/3! <BR>
+b) (e^(-3) * 3^2)/2! <BR>
+c) C(2,3) * (1/3)^3 * (2/3)^(-1) <BR>
+d) 2^3/3! <BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.1');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.1" class="showanswer" style="display: none;" > <b>Ans</b> :   a) (e^(-2) * 2^3)/3! <br/>
+<p> <b>Explanation</b>: λ=2, k=3. Using Poisson PMF: P(X=3) = (e^(-2) * 2^3)/3!
+    
+</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 2      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 12.</b> &nbsp; If X follows Poisson distribution with mean 4.5, what is its variance?
+
+</span>
+<BR>
+<p class = "options"><BR>
+a) 4.5<BR>
+b) 2.25<BR>
+c) 20.25<BR>
+d) 9<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.2');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.2" class="showanswer" style="display: none;" > <b>Ans</b> :  a) 4.5 <br/>
+<p> <b>Explanation</b>:  For Poisson distribution, mean = variance = λ.
+</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+     
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 3      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 13.</b> &nbsp; The Poisson distribution is often used to approximate the Binomial distribution when:
+</span>
+
+<p class = "options"><BR>
+a) n is large and p is close to 0.5 <BR>
+b) n is small and p is large<BR>
+c) n is large and p is small<BR>
+d) n is small and p is small<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.3');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.3" class="showanswer" style="display: none;" > <b>Ans</b> : c) n is large and p is small <br/>
+<p> <b>Explanation</b>: Poisson approximation works when n ≥ 20 and p ≤ 0.05, or n ≥ 100 and np ≤ 10. </p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 4      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 14.</b> &nbsp; If calls arrive at a rate of 1.5 per minute, what is P(no calls in a minute)?
+</span>
+<BR>
+    
+<p class = "options"><BR>
+a) e^(-1.5) <BR>
+b) 1 - e^(-1.5)<BR>
+c) 1.5 * e^(-1.5)<BR>
+d) 0<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.4');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.4" class="showanswer" style="display: none;" > <b>Ans</b> :   a) e^(-1.5) <br/>
+<p> <b>Explanation</b>:  For Poisson(λ), P(X=0) = e^(-λ) = e^(-1.5).
+
+</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 5      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 15.</b> &nbsp; For X ~ Binomial(n=10, p=0.5), what is the approximate 75th percentile? Given: P(X≤6) = Σ[k=0 to 6] [10!/(k!(10-k)!)](0.5)^k(0.5)^(10-k) ≈ 0.828
+</span>
+
+<p class = "options"><BR>
+a) 6<BR>
+b) 7<BR>
+c) 8<BR>
+d) 5<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.5');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.5" class="showanswer" style="display: none;" > <b>Ans</b> :   a) 6 <br/>
+<p> <b>Explanation</b>: The 75th percentile is the smallest x where P(X ≤ x) ≥ 0.75. P(X≤6)≈0.828 ≥ 0.75, and P(X≤5)≈0.623 < 0.75, so 6 is the 75th percentile.
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 6      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 16.</b> &nbsp; Which distribution has variance equal to mean?
+</span>
+<BR>
+
+<p class = "options"><BR>
+a) Binomial only<BR>
+b) Poisson only<BR>
+c) Both Binomial and Poisson<BR>
+d) Bernoulli only<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.6');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.6" class="showanswer" style="display: none;" > <b>Ans</b> :  b) Poisson only <br/>
+<p> <b>Explanation</b>: For Poisson: mean = variance = λ. For Binomial: mean = np, variance = np(1-p) which is less than mean unless p=0.
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 7      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 17.</b> &nbsp; If X ~ Poisson(λ=3), find the smallest k such that P(X ≤ k) ≥ 0.9. Given: P(X≤4)≈0.815, P(X≤5)≈0.916.
+</span>
+<BR>
+
+<p class = "options"><BR>
+a) 4<BR>
+b) 5<BR>
+c) 6<BR>
+d) 3<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.7');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.7" class="showanswer" style="display: none;" > <b>Ans</b> :  b) 5 <br/>
+<p> <b>Explanation</b>: P(X≤4)=0.815 < 0.9, P(X≤5)=0.916 ≥ 0.9, so k=5 is the 90th percentile.
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+
+    
+    
+    
+
+<!-- inner table-->  
+</td></tr>
+</tbody>
+</table>
+</div>
+</center>
+<BR>
+
+<!-- outer table -->
+</td> </tr> <tbody></table>
+</center>
+<BR>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXXXXXXXXXXX-->
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+<footer class="col-md-12">
+<center><font color = "navy" size =2>
+    <p class="text-center">Copyright &copy; 
+        <script>
+            var CurrentYear = new Date().getFullYear()
+            document.write(CurrentYear)
+        </script>
+       C. Peng. Last updated: 
+         <script> 
+            document.write(new Date().toLocaleDateString()); 
+         </script> 
+      </font>
+ <a href='http://www.freevisitorcounters.com'>.</a> 
+<script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=bdd86ca03bf3709e4523bf44ac939417956604f4'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/832947/t/5"></script></p>
+<center>
+<BR><BR><BR>
+</body>
+</html>
+
+
+

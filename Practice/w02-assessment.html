@@ -1,0 +1,695 @@
+﻿<html lang="en">
+<head>
+<meta charset="utf-8" />
+
+<title>w03-Practice </title>
+
+<link href="bootstrap.css" rel="stylesheet">
+<link href="homedesign.css" rel="stylesheet">
+<link href="mcqcheck.css" rel="stylesheet">
+<style>
+ *{
+    margin:0px;
+    padding:0px;
+  } 
+
+body{
+  background-color:white;
+}
+
+#myDIV a:hover {
+    background-color: #337ab7;
+    color: white;
+  }
+ .active {
+  background-color: #337ab7;
+  color: white;
+ }
+  .btn.active
+  {
+  color: white;
+}
+</style>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM  js code to control answers and explanations MMMMMMMMMMMMMMMMMMMMMMM-->
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+
+<script>let mainNav=document.getElementById("js-menu");let navBarToggle=document.getElementById("js-navbar-toggle");navBarToggle.addEventListener("click",function(){mainNav.classList.toggle("active")});</script>
+
+<script type="text/javascript">function toggle_visibility(b){var a=document.getElementById(b);if(a.style.display=="block"){a.style.display="none"}else{a.style.display="block"}}</script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-122097904-1"></script>
+
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date());gtag("config","UA-122097904-1");</script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<script>(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-5912385878283070",enable_page_level_ads:true});</script>
+
+</head>
+
+<!--MMMMMMMM  HTML BODY STARTS HERE  MMMMM-->
+<body>
+
+<!--NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN-->
+<!--NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN  Quiz Begins Here    NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN-->
+<!--NNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNN-->
+
+<!--div class = "col-md-7">
+<div class="content"-->
+
+<center>
+
+<!--XXXXXXXXXXXXXXXXXXXX outer table: for titles XXXXXXXXXXXXXXXXXX-->
+<table align = center width="700" border="1" cellpadding="0" cellspacing="0"  bordercolor=purple>
+<tr><td>
+
+<!--VVVVVVVVVVVVVVV   Assessment Title Information     VVVVVVVVVVVVVVVV-->
+
+<h4 style="text-align: center; padding-top:10px;padding-bottom:0px;"><b>MAT121 Practice Exercises</b></h4> 
+<h3 style="text-align: center; padding-top:0px;padding-bottom:10px;"><b>Probability Rules and Definition of Random Variables</b></h3> 
+<h5 style="text-align: center; padding-top:0px;padding-bottom:10px;">Instr. C. Peng</h5> 
+
+<!--XXXXXXXXXXXXXXXXXXX inner table: HTML contents XXXXXXXXXXXXXXXXXXXXXX-->
+  <center>
+  <div class="container sec">
+  <table align = center width="600" border="0" cellpadding="0" cellspacing="0"  bordercolor=purple>
+  <tbody>
+    <tr>
+    <td>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVVVVVVV         Quiz Description        VVVVVVVVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<p style="text-align: left; padding-top:15px; padding-bottom:10px; font-size:15px; color:navy;">Please show your work (draw figures such as Venn diagrams and write equations whenever possible) before checking the answer and explanations. The questions in the exams will be similar to these in the practice exercises.</p>
+<BR>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem1      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 1.</b> &nbsp; <b>The Coffee Shop</b>: At a coffee shop, 60% of customers order coffee, 40% order tea, and 25% order both coffee and tea. What is the probability that a randomly selected customer orders coffee or tea?
+
+</span>
+<BR>
+<p class = "options"><BR>
+A) 0.85 <br>
+B) 0.75 <br>
+C) 1.00 <br>
+D) 0.65 <br>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q1');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q1" class="showanswer" style="display: none;" > <b>Ans</b> : B). 0.75 <br/>
+<p> <b>Explanation</b>:  Using the addition rule: P(Coffee∪Tea)=P(C)+P(T)−P(C∩T)=0.6+0.4−0.25=0.75.
+</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 2      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 2.</b> &nbsp; <b>The Exam Results </b> In a class, 70% of students passed Math, 80% passed English, and 60% passed both. What is the probability that a randomly chosen student passed at least one of the two subjects?
+
+</span>
+<BR>
+<p class = "options"><BR>
+A) 0.90 <BR>
+B) 0.94<BR>
+C) 0.85<BR>
+D) 1.50<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q2');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q2" class="showanswer" style="display: none;" > <b>Ans</b>:  A) 0.90 <br/>
+<p> <b>Explanation</b>: P(M∪E)=P(M)+P(E)−P(M∩E)=0.7+0.8−0.6=0.90.</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+     
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 3      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 3.</b> &nbsp; <b>The Library Survey</b> A library survey found that 30% of members borrow fiction books, 50% borrow non-fiction, and 20% borrow both. What percentage borrow only fiction?
+</span>
+
+<p class = "options"><BR>
+A) 10%<BR>
+B) 20%<BR>
+C) 30%<BR>
+D) 50%<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q3');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q3" class="showanswer" style="display: none;" > <b>Ans</b> :  A) 10% <br/>
+<p> <b>Explanation</b>: Only fiction = Fiction – Both = 30%−20%=10% </p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 4      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 4.</b> &nbsp; <b>The Flight Delays</b>  At an airport, the probability that Flight A is delayed is 0.2, and the probability that Flight B is delayed is 0.15. If the events are independent, what is the probability that both flights are delayed?
+
+</span>
+<BR>
+<p class = "options"><BR>
+A) 0.35<BR>
+B) 0.03<BR>
+C) 0.30<BR>
+D) 0.05<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q4');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q4" class="showanswer" style="display: none;" > <b>Ans</b> : B) 0.03 <br/>
+<p> <b>Explanation</b>: For independent events: P(A∩B)=P(A)×P(B)=0.2×0.15=0.03.
+
+</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 5      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 5.</b> &nbsp; <b>The Weather Forecast</b> The probability of rain on Saturday is 0.4, and the probability of rain on Sunday is 0.3. If the probability that it rains on at least one day is 0.55, are the events “rain on Saturday” and “rain on Sunday” mutually exclusive?
+</span>
+
+<p class = "options"><BR>
+A) Yes <BR>
+B) No <BR>
+C) Not enough information <BR>
+D) They are independent <BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q5');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q5" class="showanswer" style="display: none;" > <b>Ans</b> : B) No <br/>
+<p> <b>Explanation</b>: If mutually exclusive, P(Sat∪Sun)=0.4+0.3=0.7. But given value is 0.55, which is less than 0.7, so they can occur together (are not mutually exclusive).
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 6      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+    <b>Problem 6.</b> &nbsp; <b>The Job Applicants</b> Out of 100 applicants, 65 have a degree, 45 have experience, and 30 have both. Given that an applicant has a degree, what is the probability they also have experience?
+</span>
+<BR>
+
+<p class = "options"><BR>
+A) 0.30<BR>
+B) 0.461<BR>
+C) 0.667<BR>
+D) 0.45<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q6');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q6" class="showanswer" style="display: none;" > <b>Ans</b> :  B) 0.461 <br/>
+<p> <b>Explanation</b>:  Conditional probability: P(Exp∣Degree)= P(Exp∩Degree)/P(Degree) = 0.30/0.65  ≈0.461.    
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 7      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+    <b>Problem 7.</b> &nbsp; <b>The Soccer Team</b> A soccer team wins with probability 0.6, draws with probability 0.25, and loses with probability 0.15. What is the probability they do not lose?
+</span>
+<BR>
+
+<p class = "options"><BR>
+A) 0.85<BR>
+B) 0.75<BR>
+C) 0.40<BR>
+D) 0.60<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q7');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q7" class="showanswer" style="display: none;" > <b>Ans</b> :  A) 0.85 <br/>
+<p> <b>Explanation</b>:  Not lose = win or draw = 0.6+0.25=0.85. Alternatively, 1−P(lose)=1−0.15=0.85.
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 8      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 8.</b> &nbsp;  <b>The Medical Test</b> A medical test for a disease has a false positive rate of 5%. If 1 in 1000 people have the disease, and a random person tests positive, which probability concept is needed to find the chance they actually have the disease?
+</span>
+<BR>
+
+<p class = "options"><BR>
+A) Addition rule<BR>
+B) Multiplication rule for independent events<BR>
+C) Conditional probability<BR>
+D) Mutually exclusive rule<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q8');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q8" class="showanswer" style="display: none;" > <b>Ans</b> : C) Conditional probability <br/>
+<p> <b>Explanation</b>:  We want P(Disease∣Positive), which is found using Bayes’ theorem, a conditional probability calculation.
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 9    VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 9.</b> &nbsp; <b>The Restaurant Orders</b> At a restaurant, the probability a customer orders dessert is 0.3. The probability they order coffee is 0.5. If ordering dessert and ordering coffee are mutually exclusive, what is the probability a customer orders dessert or coffee?
+</span>
+<BR>
+
+<p class = "options"><BR>
+A) 0.15<BR>
+B) 0.80<BR>
+C) 0.65<BR>
+D) 0.80<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q9');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q9" class="showanswer" style="display: none;" > <b>Ans</b> : B) 0.80 <br/>
+<p> <b>Explanation</b>: Mutually exclusive means P(D∩C)=0. So P(D∪C)=P(D)+P(C)=0.3+0.5=0.80.
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 10    VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 10.</b> &nbsp; <b>The Traffic Lights</b> You pass through three independent traffic lights on your commute. Each has a 0.4 chance of being red. What is the probability all three are red?
+</span>
+
+<p class = "options"><BR>
+A) 1.2<BR>
+B) 0.064<BR>
+C) 0.4<BR>
+D) 0.12<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q10');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q10" class="showanswer" style="display: none;" > <b>Ans</b> :  B) 0.064 <br/>
+<p> <b>Explanation</b>:  Independent events: 0.4×0.4×0.4=0.064.
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+
+
+    
+    
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+
+
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem1      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 11.</b> &nbsp;You roll a fair six-sided die. This is an example of:
+</span>
+    
+<BR>
+<p class = "options"><BR>
+A) A continuous uniform random variable<BR>
+B) A discrete uniform random variable<BR>
+C) A normal random variable<BR>
+D) A binomial random variable<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.1');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.1" class="showanswer" style="display: none;" > <b>Ans</b> :  B) A discrete uniform random variable <br/>
+<p> <b>Explanation</b>: A fair six-sided die produces outcomes 1 through 6 with equal probability (1/6 each), making it discrete (countable outcomes) and uniform (equal probabilities).</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 2      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 12.</b> &nbsp; A game show wheel is divided into 10 equal-sized wedges numbered 1 through 10. When spun fairly, the number where it stops follows:
+
+</span>
+<BR>
+<p class = "options"><BR>
+A) A continuous uniform distribution<BR>
+B) A discrete non-uniform distribution<BR>
+C) A discrete uniform distribution<BR>
+D) A Poisson distribution<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.2');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.2" class="showanswer" style="display: none;" > <b>Ans</b> : C) A discrete uniform distribution <br/>
+<p> <b>Explanation</b>:  The wheel has a finite number of equally likely outcomes (10 wedges), so it's discrete uniform with P(X=k) = 1/10 for k = 1, 2, ..., 10.
+</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+     
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 3      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 13.</b> &nbsp;<b> Probability Density Function</b> For a continuous uniform random variable X on [a, b], the height of its probability density function between a and b is:
+</span>
+
+<p class = "options"><BR>
+A) 1 <BR>
+B) (b - a)<BR>
+C) 1/(b - a)<BR>
+D) 0.5<BR>
+</p>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.3');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.3" class="showanswer" style="display: none;" > <b>Ans</b> :  C) 1/(b - a) <br/>
+<p> <b>Explanation</b>:  For a continuous uniform distribution, the PDF is constant between a and b. The area under the PDF must equal 1, so height × width = 1 ⇒ height = 1/(b - a). </p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 4      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 14.</b> &nbsp;  <b> Random Time Appointment</b> You schedule a meeting randomly between 2:00 PM and 3:00 PM. The arrival time X (in minutes after 2:00) follows a continuous uniform distribution. What is P(X > 45)?
+</span>
+<BR>
+    
+<p class = "options"><BR>
+A) 0.25<BR>
+B) 0.50<BR>
+C) 0.75<BR>
+D) 0.85<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.4');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.4" class="showanswer" style="display: none;" > <b>Ans</b> :  A) 0.25 <br/>
+<p> <b>Explanation</b>:  X ~ U[0, 60]. P(X > 45) = (60 - 45)/(60 - 0) = 15/60 = 0.25.
+
+</p></div><br/>
+</p>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 5      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 15.</b> &nbsp; You roll a fair six-sided die. Let X be the outcome. What is P(2 ≤ X ≤ 4)?
+</span>
+
+<p class = "options"><BR>
+A) 1/6<BR>
+B) 1/3<BR>
+C) 1/2<BR>
+D) 2/3<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.5');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.5" class="showanswer" style="display: none;" > <b>Ans</b> :  C) 1/2 <br/>
+<p> <b>Explanation</b>: For a discrete uniform distribution on {1,2,3,4,5,6}, each outcome has probability 1/6. P(2 ≤ X ≤ 4) = P(X=2) + P(X=3) + P(X=4) = 3/6 = 1/2.
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 6      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 16.</b> &nbsp; <b> Mixed Probability Question</b> X follows a continuous uniform distribution on [0, 10]. What is P(3 ≤ X ≤ 7)?
+</span>
+<BR>
+
+<p class = "options"><BR>
+A) 0.3<BR>
+B) 0.4<BR>
+C) 0.5<BR>
+D) 0.7<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.6');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.6" class="showanswer" style="display: none;" > <b>Ans</b> :  B) 0.4 <br/>
+<p> <b>Explanation</b>: For U[0,10], P(3 ≤ X ≤ 7) = (7-3)/(10-0) = 4/10 = 0.4. 
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 7      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 17.</b> &nbsp; <b>The Gym Members</b> A gym finds that 40% of members use the treadmill, 50% use weights, and 30% use both. Are using the treadmill and using weights independent?
+</span>
+<BR>
+
+<p class = "options"><BR>
+A) Yes, because P(T) × P(W) = 0.4 × 0.5 = 0.2, which is not equal to P(T and W) = 0.3<BR>
+B) No, because P(T) × P(W) ≠ P(T and W)<BR>
+C) Yes, because they can both happen<BR>
+D) No, because they are mutually exclusive<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.7');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.7" class="showanswer" style="display: none;" > <b>Ans</b> :  B) No, because P(T) × P(W) ≠ P(T and W) <br/>
+<p> <b>Explanation</b>: For independence, P(T∩W) should equal 0.4×0.5=0.2. Here it is 0.3, so they are not independent.
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 8      VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 18.</b> &nbsp;  <b>The Assembly Line</b> A factory has two machines, A and B. The probability machine A fails is 0.1, and the probability machine B fails is 0.05. If failures are independent, what is the probability both are working?
+
+</span>
+<BR>
+
+<p class = "options"><BR>
+A) 0.95<BR>
+B) 0.855<BR>
+C) 0.15<BR>
+D) 0.995<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.8');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.8" class="showanswer" style="display: none;" > <b>Ans</b> : B) 0.855 <br/>
+<p> <b>Explanation</b>: P(A works)=0.9, (B works)=0.95. Independent ⇒ 0.9×0.95=0.855.
+</p></div><br/>
+</font>
+</p>
+<BR>
+     
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 9    VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 19.</b> &nbsp; <b> The Magazine Readers</b> A survey finds that 40% read Newsweek, 30% read Time, and 20% read both. What percentage read exactly one of the two magazines?
+
+</span>
+<BR>
+
+<p class = "options"><BR>
+A) 20%
+B) 30%
+C) 50%
+D) 70%
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.9');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.9" class="showanswer" style="display: none;" > <b>Ans</b> :  B) 30% <br/>
+<p> <b>Explanation</b>:  Exactly one = (Only Newsweek) + (Only Time) = (40−20)+(30−20)=20+10=30%.
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->
+<!--VVVV     Problem 10    VVVVV-->
+<!--VVVVVVVVVVVVVVVVVVVVVVVVVVVV-->     
+<p class="mcq"><span class = "ques">
+<b>Problem 20.</b> &nbsp; <b>The Car Insurance</b> Data shows 10% of drivers have an accident in a year, 20% get a speeding ticket, and 3% have both. What is P(accident | speeding ticket)?
+</span>
+
+<p class = "options"><BR>
+A) 0.03<BR>
+B) 0.15<BR>
+C) 0.30<BR>
+D) 0.50<BR>
+</p>
+<BR>
+
+<p>
+<font color = "red">
+<span  onclick="toggle_visibility('q.10');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+<div id="q.10" class="showanswer" style="display: none;" > <b>Ans</b> :  B) 0.15 <br/>
+<p> <b>Explanation</b>: P(A∣T)= P(A∩T)/P(T) = 0.03/0.20 = 0.15. 
+</p></div><br/>
+</font>
+</p>
+<BR>
+
+    
+    
+    
+    
+    
+    
+    
+
+<!-- inner table-->  
+</td></tr>
+</tbody>
+</table>
+</div>
+</center>
+<BR>
+
+<!-- outer table -->
+</td> </tr> <tbody></table>
+</center>
+<BR>
+
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+<!--XXXXXXXXXXXXXXXXXXXXXXXXXXX  FOOTER  XXXXXXXXXXXXXXXXXXXXXXX-->
+<!--MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM-->
+<footer class="col-md-12">
+<center><font color = "navy" size =2>
+    <p class="text-center">Copyright &copy; 
+        <script>
+            var CurrentYear = new Date().getFullYear()
+            document.write(CurrentYear)
+        </script>
+       C. Peng. Last updated: 
+         <script> 
+            document.write(new Date().toLocaleDateString()); 
+         </script> 
+      </font>
+ <a href='http://www.freevisitorcounters.com'>.</a> 
+<script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=bdd86ca03bf3709e4523bf44ac939417956604f4'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/832947/t/5"></script></p>
+<center>
+<BR><BR><BR>
+</body>
+</html>
+
+
+
