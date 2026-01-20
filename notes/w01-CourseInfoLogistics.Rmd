@@ -1,0 +1,212 @@
+---
+title: "Important Course Information"
+author: "MAT125 - Intro. Prob. and Stats"
+date: " "
+output:
+  html_document: 
+    toc: yes
+    toc_depth: 4
+    toc_float: yes
+    number_sections: yes
+    toc_collapsed: yes
+    code_folding: hide
+    code_download: no
+    smooth_scroll: yes
+    theme: lumen
+  pdf_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    number_sections: yes
+    fig_width: 5
+    fig_height: 4
+---
+
+```{=html}
+
+<style type="text/css">
+
+div#TOC li {
+    list-style:none;
+    background-image:none;
+    background-repeat:none;
+    background-position:0;
+}
+
+/* Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML. it is a simple mechanism for adding style (e.g., fonts, colors, spacing) to Web documents. */
+
+h1.title {  /* Title - font specifications of the report title */
+  font-size: 22px;
+  font-weight: bold;
+  color: navy;
+  text-align: center;
+  font-family: "Gill Sans", sans-serif;
+}
+h4.author { /* Header 4 - font specifications for authors  */
+  font-size: 18px;
+  font-weight: bold;
+  font-family: system-ui;
+  color: navy;
+  text-align: center;
+}
+h4.date { /* Header 4 - font specifications for the date  */
+  font-size: 18px;
+  font-family: system-ui;
+  color: DarkBlue;
+  text-align: center;
+  font-weight: bold;
+}
+h1 { /* Header 1 - font specifications for level 1 section title  */
+    font-size: 18px;
+    font-family: "Gill Sans", sans-serif;
+    color: navy;
+    text-align: center;
+    font-weight: bold;
+}
+h2 { /* Header 2 - font specifications for level 2 section title */
+    font-size: 16px;
+    font-family: "Gill Sans", sans-serif;
+    color: navy;
+    text-align: left;
+    font-weight: bold;
+}
+
+h3 { /* Header 3 - font specifications of level 3 section title  */
+    font-size: 14px;
+    font-family: "Gill Sans", sans-serif;
+    color: navy;
+    text-align: left;
+}
+
+h4 { /* Header 4 - font specifications of level 4 section title  */
+    font-size: 12px;
+    font-family: "Gill Sans", sans-serif;
+    color: darkred;
+    text-align: left;
+}
+
+body { background-color:white; }
+
+.highlightme { background-color:yellow; }
+
+p { background-color:white; }
+
+</style>
+```
+
+```{r setup, include=FALSE}
+# code chunk specifies whether the R code, warnings, and output 
+# will be included in the output files.
+if(!require('vembedr')) {
+  install.packages('vembedr')
+  library('vembedr')
+}
+if (!require("knitr")) {
+   install.packages("knitr")
+   library(knitr)
+}
+# knitr::opts_knit$set(root.dir = "C:/Users/75CPENG/OneDrive - West Chester University of PA/Documents")
+# knitr::opts_knit$set(root.dir = "C:\\STA490\\w05")
+
+knitr::opts_chunk$set(echo = FALSE,       
+                      warning = FALSE,   
+                      results = TRUE,   
+                      message = FALSE)
+```
+
+
+\
+
+# Introduction 
+
+<font color = "darkred">**This class format is in-person, with up to 25% online instruction.**</font>
+
+**D2L is used only for weekly exams and the final exam. All weekly topic lists, lecture notes, online practice exercises, and interactive statistics learning apps are available exclusively on the course website, not on D2L.**
+
+The course materials are structured in a modular format, with each module focusing on a specific topic or theme. Each module includes a dedicated web page containing a topic list, links to lecture notes (which feature embedded short videos), online practice exercises, and ISLA apps for self-assessment to gauge your understanding. At the end of each week, you will take a weekly exam through D2L covering all topics from the module of the week.
+
+
+# What Are You Expected to Do Every Week?
+
+We will cover one module each week, which are structured in the right navigation panel on the course webpage (https://pengdsci.github.io/MAT121SP26/). **After each class, you are encouraged to follow the suggested workflow**:
+
+* **Study the module notes**. For each module, you are expected to:
+  + Study the content to understand the key concepts and procedures.
+  + Work through the examples (i.e., do not simply read the completed solutions) and check the provided answers.
+  + Attempt any trial exercises in the notes (if available) and verify your work using the appropriate **ISLA apps**.
+  + Practice additional online exercises linked on the module’s webpage.
+
+* **After completing each module**, go to **D2L** to take the corresponding **weekly quiz**, which covers that module’s topics. 
+
+* **To find the weekly exam on D2L**,
+  + Log in to D2L using your WCU login credentials.
+  + Click the course icon to access the course page.
+  + From the **Assessments** drop-down menu, select **Quizzes**.
+  + Click the link for the appropriate weekly quiz.
+
+
+# Some Advice
+
+To enhance your learning experience and achieve your goals, I offer the following advice:
+
+* **Start early on weekly materials—never wait until the last minute**. Procrastination will hinder your progress.
+
+* **Practice Actively (Don’t Just Read) Examples and Online Problems**:
+
+**Tip**: Treat multiple-choice problems as "show-your-work" problems. Solve them step by step, then select the correct answer based on your reasoning. For the online practice exercises, only click the "answer" button after completing your work. Use these resources wisely and responsibly.
+
+* **Use ISLA (Interactive Statistical Learning App) Effectively**:
+
+Use **ISLA** to verify your work and ensure accurate statistical reasoning. If your answers differ from the app’s, carefully review your work to identify mistakes. This process helps debug your thinking and strengthens your understanding.
+
+* **Seek Help When Needed**:
+
+If you struggle with certain concepts or examples, note them down and reach out to me or the excellent tutors at the MLC. Remember: You can succeed regardless of your prior math experience. Challenges are a normal part of learning—don’t hesitate to ask me, tutors, or peers for help. Never give up!
+
+
+# Some Additional Information on Weekly Quizzes and Exams
+
+
+* **Make-up Exams/Quizzes**
+  + **No Make-up Weekly Quizzes** – You have two and a half days to complete the weekly quizzes.
+  + **No Make-up Exams** will be offered unless you provide a **university-approved, documented excuse** and notify me **in advance of** the scheduled exam.
+
+* **Additional Information About Weekly Quizzes and Midterm Exams**:
+  + Each **weekly quiz** consists of **10–15 multiple-choice questions**.
+  + Each **midterm exam** consists of **25–35 multiple-choice questions**.
+  + Every student will receive a **different version** of the weekly exam, **all of equal difficulty**.
+  + You are allowed **2 attempts per weekly exam**, and only your **highest score** will be recorded.
+  + If you **re-attempt** the exam, you must **restart the entire exam** <font color="red">(not just the questions answered incorrectly in the previous attempt)</font>.
+
+\
+
+# Policies, Resources, and Expectations
+
+**Course policies and expectations for exams** are outlined in the syllabus which is posted on the course web page (link is on the top navigation panel).
+
+I provide **comprehensive lecture notes** and have developed **17 interactive statistics learning apps** specifically for this course. Therefore, you do not need to purchase any additional materials or devices. All you need is a commitment to studying the weekly materials and practicing problems through the online exercises.
+
+
+## Textbook <font color = "red">(Not Required)</font>
+
+Other sections of this course may require the textbook **Elementary Statistics** by Navidi and Monk (3rd edition). However, this class does not require any textbook. I will provide all necessary material through my lecture notes, which follow the same notational system.
+
+If you would like to keep a copy of the textbook for reference, you are welcome to do so. <font color="red">**If you do not need it, you must opt out of the required eBook. Once you receive the email notification, be sure to take action—otherwise, you will be automatically charged for the electronic textbook.**</font>
+
+
+## Interactive Statistics Learning Apps (ISLA)
+
+I have dedicated significant effort to creating a variety of graphics in the lecture notes and eBook to help you visualize the material wherever possible. Additionally, I’ve developed interactive apps **ISLA** that complement the topics covered in the notes. These apps are organized as standalone sections under the Use of Technology heading to further deepen your understanding of the content.
+
+
+## Calculators and Technologies
+
+
+**Graphing calculators are not required for this class**, as we only use them occasionally for simple calculations. Instead, you should have a **basic scientific calculator** capable of performing the four basic operations (`+, -, ×, ÷`) and square roots ($\sqrt{x}$).
+
+You can also use the **ISLA** apps as a statistical calculator—both to verify your manual calculations and to check results in the lecture examples (which is how I use them in class).
+
+
+\
+
+
