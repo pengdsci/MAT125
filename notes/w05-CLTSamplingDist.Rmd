@@ -1,0 +1,740 @@
+---
+title: "Topic 5. CLT and Sampling Distributions"
+author: "Cheng Peng"
+date: " "
+output:
+  html_document: 
+    toc: yes
+    toc_float: true
+    toc_depth: 4
+    fig_width: 6
+    fig_caption: yes
+    number_sections: yes
+    theme: readable
+  pdf_document: 
+    toc: yes
+    toc_depth: 4
+    fig_caption: yes
+    number_sections: yes
+    fig_width: 5
+    fig_height: 4
+---
+
+
+
+```{js echo=FALSE}
+let mainNav=document.getElementById("js-menu");
+        let navBarToggle=document.getElementById("js-navbar-toggle");
+        navBarToggle.addEventListener("click",function(){mainNav.classList.toggle("active")});
+
+function toggle_visibility(b){
+     var a=document.getElementById(b);
+     if(a.style.display=="block"){a.style.display="none"}else{a.style.display="block"}}
+
+window.dataLayer=window.dataLayer||[];
+
+function gtag(){dataLayer.push(arguments)}
+
+gtag("js",new Date());
+
+gtag("config","UA-122097904-1");
+
+(adsbygoogle=window.adsbygoogle||[]).push({google_ad_client:"ca-pub-5912385878283070",enable_page_level_ads:true});
+
+```
+
+
+```{css echo= FALSE}
+
+<style type="text/css">
+
+div#TOC li {
+    list-style:none;
+    background-image:none;
+    background-repeat:none;
+    background-position:0;
+}
+h1.title {
+  font-size: 24px;
+  color: DarkRed;
+  text-align: center;
+}
+h4.author { /* Header 4 - and the author and data headers use this too  */
+    font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkRed;
+  text-align: center;
+}
+h4.date { /* Header 4 - and the author and data headers use this too  */
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+  text-align: center;
+}
+
+h1 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 20px;
+    font-family: "Times New Roman", Times, serif;
+    color: darkred;
+    text-align: center;
+}
+h2 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 18px;
+    font-family: "Times New Roman", Times, serif;
+    color: navy;
+    text-align: left;
+}
+
+h3 { /* Header 3 - and the author and data headers use this too  */
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    color: navy;
+    text-align: left;
+}
+
+</style>
+```
+
+
+```{r setup, include=FALSE}
+# code chunk specifies whether the R code, warnings, and output 
+# will be included in the output files.
+if(!require('vembedr')) {
+  install.packages('vembedr')
+  library('vembedr')
+}
+if (!require("knitr")) {
+   install.packages("knitr")
+   library(knitr)
+}
+# knitr::opts_knit$set(root.dir = "C:/Users/75CPENG/OneDrive - West Chester University of PA/Documents")
+# knitr::opts_knit$set(root.dir = "C:\\STA490\\w05")
+
+knitr::opts_chunk$set(echo = FALSE,       
+                      warning = FALSE,   
+                      result = TRUE,   
+                      message = FALSE)
+```
+
+
+\
+\
+
+# Introduction
+
+We have discussed both standard normal and general normal distributions as well as associated two types of questions. In this course, we primarily focus on the inference about the population mean means and proportions from random samples. We will use the sample mean and sample proportion (`both are statistics`) to approximate the population mean and proportion (`both are parameters`).
+
+Since both sample mean and proportions are statistics, they are random. We need to discuss the distributions of sample means and sample proportions. 
+
+**Some Terminologies**: We have learned concepts of the population (parameters) and sample (statistics) as well as probability distributions of random variables.  
+
+* **Random Sample** is a subset of values that represents the population of interest. 
+
+* **Sampling Distribution** - the distributions of sample statistics are called sampling distributions.
+
+* **Sampling Distribution of Sample Means** – A theoretical probability distribution of sample means that would be obtained by drawing from the population all possible samples of the same size. 
+
+* **The Standard Error Sample Mean** – The standard deviation of the sampling distribution of the mean.  It describes how much dispersion there is in the sampling distribution of the mean
+
+
+
+# Central Limit Theorem (CLT)
+
+> **Central Limit Theorem**: If all possible random samples of size n are drawn from a population with a mean $\mu$ and standard deviation $\sigma$, then as n increases, the sampling distribution of sample means approaches a normal distribution with mean $\mu$ and standard deviation $\sigma/\sqrt{n}$.
+
+**Remarks** 
+
+1. The population distribution is NOT specified in CLT. This implies that the CLT could be used for any population (continuous or discrete).
+
+2. The sample size should be large to guarantee a good approximation of the sample mean to a normal distribution. **How large is large?**  `By convention, in this course, if n > 30, the sample is called "large"`. 
+
+3. The distribution of the sample is **approximately normally distributed**. The mean of the sample means ($\bar{X}$) is equal to the population mean ($\mu$) and the standard deviation of the sample mean is equal to $\sigma/\sqrt{n}$.
+
+In summary, let $\{X_1, X_2, \cdots, X_n \}$ be a sample taken from a population $(\mu, \sigma)$, by convention, if $n > 30$, 
+
+$$
+\bar{X} \to N \big(\mu, \frac{\sigma}{\sqrt{n}} \big)
+$$
+or equivalently,
+$$
+\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \to N(0, 1)
+$$
+
+The following figure shows how the sample size impacts the variance of the sample mean.
+
+```{r fig.align='center', out.width = '60%'}
+include_graphics("week05/CLT.png")
+```
+
+\
+
+**An Important Fact**
+
+*If the population is normal, then* 
+$$
+\bar{X} \to N \big(\mu, \frac{\sigma}{\sqrt{n}} \big)
+$$
+*regardless of the sample size*.
+
+
+\
+
+
+<font color = "darkred"><b>Example 1.</b></font> The length of time people spend driving each day is different in different age groups. A previous study shows that drivers aged 15 to 19 drive on average $\mu =$ 25 minutes a day and standard deviation $\sigma =$ 1.5 minutes. A random sample of 50 drivers was selected What is the probability that the average time they spend driving each day is between 24.7 and 25.5 minutes?
+
+**Solution:** Since $n = 50 > 30$, from the Central Limit Theorem, the sampling distribution of sample means is approximately normal with $(\mu, \sigma/\sqrt{n}) = (25, 0.21)$. 
+
+```{r fig.align='center', out.width = '100%'}
+include_graphics("week05/example01.png")
+```
+
+**Conclusion**: The probability that the average time they spend driving each day is between 24.7 and 25.5 minutes is approximately 0.9116.
+\
+
+
+
+<font color = "darkred"><b>Example 2.</b></font> A bank auditor claims that **credit card balances are normally distributed**, with a mean of \$2870 and a standard deviation of \$900.
+
+1. What is the probability that a randomly selected credit card holder has a credit card balance of less than \$2500? 
+
+**Solution**: Since the card balances are normally distributed, we convert the general normal distribution to the standard normal distribution to find the probability (see the following figure) 
+
+```{r fig.align='center', out.width = '100%'}
+include_graphics("week05/example02-1.png")
+```
+
+
+Therefore, there is a 34% chance that an individual will have a balance of less than $2500.
+
+\
+
+2. You randomly select 25 credit cardholders. What is the probability that their mean credit card balance is less than \$2500?
+
+**Solution**: Because the population is normal, we use the important fact that the sample mean $\bar{X}$ is normally distributed. 
+
+```{r fig.align='center', out.width = '100%'}
+include_graphics("week05/example02-2.png")
+```
+
+Therefore, there is only a 2% chance that the mean of a sample of 25 will have a balance of less than $2500 (an unusual event). 
+
+
+3. Is it possible that the auditor’s claim that the mean is exactly \$2870 is incorrect?
+
+**Solution**
+
+It is impossible since the probability of observing a single value from the population is always zero. 
+
+\
+
+
+# Sampling Distribution of Sample Proportion $\hat{p}$
+
+As an application of the central limit theorem, we now discuss the sampling distribution of sample proportion ($\hat{p}$).
+
+* In real-world problems, we are often interested in categorical responses rather than measurements—for example, gender (male, female), political preference (Republican, Democrat), or approval of a new proposal (yes, no).
+
+* Our data therefore consist of the counts or proportions of observations in each category.
+
+* The goal is to learn about population proportions using the information from these sample proportions.
+
+
+**A binary population**: contains only two possible distinct values, say "success" and "failure".
+
+**Count**: X = the number of successes in a sample of size n
+
+**Proportion**: $\hat{p} =$ the proportion of successes in a sample of size n
+
+
+**Sampling Distribution Of A Proportion**: if $np > 5$ and $n(1-p) > 5$, then
+$$
+\hat{p} \to N\Big( p, \sqrt{\frac{p(1-p)}{n}}\Big)
+$$
+or equivalently
+
+$$
+\frac{\hat{p}-p}{\sqrt{\frac{p(1-p)}{n}}} \to N(0, 1)
+$$
+**A cautionary note about proportion**: *Whenever working with proportion, we MUST use proportion in the form of decimal in all calculations.*
+
+
+\
+
+
+<font color = "darkred"><b>Example 3.</b></font> Suppose it is known that 43% of Americans own an iPhone. If a random sample of 50 Americans were surveyed, what is the probability that the proportion of the sample who owned an iPhone is between 45% and 50%?
+
+**Solution**: We are given that $n = 50$ and $p = 0.43$. Because $np = 50\times 0.43 = 21.5 > 5$ and $n(1-p) = 50 \times (1-0.43) = 28.5 > 5$, we use the above sampling distribution. The following figure gives the steps for finding the probability.
+
+```{r fig.align='center', out.width = '100%'}
+include_graphics("week05/example03.png")
+```
+
+Therefore, the probability that the proportion of the sample who owned an iPhone is between 45% and 50% is about $0.227 = 22.7\%$.
+
+\
+
+# Use of Technology
+
+Three **IntroStatsApps** were created to illustrate the central limit theorem (CLT) and its applications. The solutions of the above examples were produced using ** IntroStatsApps**.
+
+## CLT Demo
+
+**IntroStatsApps-Central Limit Theorem Demo** illustrates the CLT with various populations including the normal population. You can click the link (https://wcupeng.shinyapps.io/CLTdemo/) to explore the CLT under different populations. See the following screenshot of the demo.
+
+```{r fig.align='center', out.width = '100%'}
+include_graphics("week05/cltDemo.png")
+```
+
+
+## CLT for Mean and Proportion.
+
+When the sampling distribution is normal (the cases of CLT or normal population), we can use this application to answer questions of probability and percentile. The link to this application is at: https://wcupeng.shinyapps.io/AppsCLT4Means/.
+
+```{r fig.align='center', out.width = '100%'}
+include_graphics("week05/cltMean.png")
+```
+
+For the sampling distribution of sample proportion, we use the following application to answer the questions about probability and percentile. The link to the applications is at: https://wcupeng.shinyapps.io/AppsCLT4Prop/.
+
+```{r fig.align='center', out.width = '100%'}
+include_graphics("week05/cltProp.png")
+```
+
+The video demonstrated how to use the apps to solve the problems related to sampling distribution of sample means ($\bar{x}$) and sample proportions $\hat{p}$. 
+
+
+\
+
+# Practice Exercises
+
+
+1. The U.S. National Center for Health Statistics publishes information on the length of stay by patients in short-stay hospitals in Vital and Health Statistics. According to that publication, the mean stay of female patients in short-stay hospitals is 5.8 days and the standard deviation is 4.3 days. Let $\bar{x}$ denote the mean length of stay for a sample of discharged female patients.
+
+
+A). For a sample size of 81, find the mean and standard deviation of the sample mean. Interpret your results in words.
+
+  <font color = "red">
+  <span  onclick="toggle_visibility('q1a');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+  <div id="q1a" class="showanswer" style="display: none;" > 
+
+**Given:**
+
+- Population mean: $\mu = 5.8$ days  
+- Population standard deviation: $\sigma = 4.3$ days  
+- Sample mean: $\bar{x}$
+
+**A) Sample size $n = 81$**
+
+*Mean of sample mean:*
+
+$$
+\mu_{\bar{x}} = \mu = 5.8 \text{ days}
+$$
+
+*Standard deviation of sample mean (standard error):*
+
+$$
+\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{4.3}{\sqrt{81}} = \frac{4.3}{9} \approx 0.4778 \text{ days}
+$$
+
+*Interpretation:*
+
+For all possible samples of 81 discharged female patients, the average of their sample mean lengths of stay is 5.8 days (same as the population mean). The variability of these sample means around 5.8 days is approximately 0.478 days, which is much smaller than the individual patient variability of 4.3 days.
+
+
+  </p></div><br/>
+  </font>
+
+
+
+B). Repeat part A) with n = 144. Find the percentage that the mean stay of those 144 female patients in short-stay hospitals is less than 5 days.
+
+  <font color = "red">
+  <span  onclick="toggle_visibility('q1b');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+  <div id="q1b" class="showanswer" style="display: none;" > 
+  
+**B) Sample size $n = 144$**
+
+*Mean and standard deviation:*
+
+$$
+\mu_{\bar{x}} = \mu = 5.8 \text{ days}
+$$
+
+$$
+\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{144}} = \frac{4.3}{12} \approx 0.3583 \text{ days}
+$$
+
+*Probability $\bar{x} < 5$ days:*
+
+*1. Standardize:*
+
+$$
+z = \frac{\bar{x} - \mu_{\bar{x}}}{\sigma_{\bar{x}}} = \frac{5 - 5.8}{0.3583} \approx \frac{-0.8}{0.3583} \approx -2.233
+$$
+
+*2. Find probability using z-table:*
+
+We need $P(\bar{x} < 5) = P(Z < -2.233)$.
+
+From symmetry: $P(Z < -2.233) = P(Z > 2.233)$ 
+
+From z-table:  
+
+$P(Z < 2.23) \approx 0.9871$, so $P(Z > 2.23) \approx 0.0129$  
+
+$P(Z < 2.24) \approx 0.9875$, so $P(Z > 2.24) \approx 0.0125$
+
+Interpolating for $z = 2.233$:  
+
+Difference between 2.23 and 2.24: $0.0004$ in left-tail probability 
+
+For 0.3 of the way: $0.3 \times 0.0004 = 0.00012$
+
+So $P(Z < 2.233) \approx 0.9871 + 0.00012 \approx 0.98722$  
+
+Thus $P(Z > 2.233) \approx 1 - 0.98722 = 0.01278$
+
+Therefore:
+
+$$
+P(Z < -2.233) \approx 0.0128
+$$
+
+*3. Percentage:*
+
+$$
+P(\bar{x} < 5) \approx 0.0128 \times 100\% = 1.28\%
+$$
+
+  </p></div><br/>
+  </font>
+  
+  
+\
+
+2. According to the U.S. Census Bureau publication Current Construction Reports, the mean price of new mobile homes is \$43,800. The standard deviation of the prices is \$7200. Let $\bar{x}$ denote the mean price of a sample of new mobile homes.
+
+  <font color = "red">
+  <span  onclick="toggle_visibility('q2.0');" class="view"><font color = "blue"><b>Given Info</b></font></span>
+  <div id="q2.0" class="showanswer" style="display: none;" > 
+
+   - Population mean: $\mu = 43,800$  
+   - Population standard deviation: $\sigma = 7,200$  
+   - Sample mean: $\bar{x}$  
+
+   For a simple random sample of size $n$ from a large population,  
+
+$$
+\mu_{\bar{x}} = \mu
+$$
+
+$$
+\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}}
+$$
+
+  </p></div><br/>
+  </font>
+
+
+
+  A). For a sample of 49 randomly selected mobile homes, find the mean and standard deviation of the sample mean.
+
+  <font color = "red">
+  <span  onclick="toggle_visibility('q2.1');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+  <div id="q2.1" class="showanswer" style="display: none;" > 
+
+   **A) $n = 49$**
+
+$$
+\mu_{\bar{x}} = \mu = 43,800
+$$
+
+$$
+\sigma_{\bar{x}} = \frac{7200}{\sqrt{49}} = \frac{7200}{7} = 1028.5714
+$$
+  </p></div><br/>
+  </font>
+
+
+
+
+  B). Repeat part A) with n =100. Compare the results you obtained in A).
+
+  <font color = "red">
+  <span  onclick="toggle_visibility('q2.2');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+  <div id="q2.2" class="showanswer" style="display: none;" > 
+
+**B) $n = 100$**
+
+$$
+\mu_{\bar{x}} = \mu = 43,800
+$$
+
+$$
+\sigma_{\bar{x}} = \frac{7200}{\sqrt{100}} = \frac{7200}{10} = 720
+$$
+
+**Comparison:**  
+As $n$ increases from 49 to 100, the mean of $\bar{x}$ stays the same, but the standard error decreases from about 1028.57 to 720. This shows less variability in sample means when the sample size is larger.
+
+  
+  </p></div><br/>
+  </font>
+
+
+
+
+  C ). For a sample of 64 randomly selected mobile homes, find the probability that the mean is greater than \$45,000.
+  
+  <font color = "red">
+  <span  onclick="toggle_visibility('q2.3');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+  <div id="q2.3" class="showanswer" style="display: none;" > 
+
+**C) $n = 64$, $P(\bar{x} > 45,000)$**
+
+$$
+\sigma_{\bar{x}} = \frac{7200}{\sqrt{64}} = \frac{7200}{8} = 900
+$$
+
+Standardize:  
+
+$$
+z = \frac{45,000 - 43,800}{900} = \frac{1200}{900} = 1.3333
+$$
+
+Using the standard normal table,  
+
+$$
+P(Z > 1.33) = 1 - P(Z < 1.33)
+$$
+
+From the $z$-table: $P(Z < 1.33) \approx 0.9082$  
+
+$$
+P(Z > 1.33) \approx 1 - 0.9082 = 0.0918
+$$
+
+  </p></div><br/>
+  </font>
+  
+
+  D). For a sample of 64 randomly selected mobile homes, find the probability that the mean is exactly \$45,000. 
+
+  <font color = "red">
+  <span  onclick="toggle_visibility('q2.4');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+  <div id="q2.4" class="showanswer" style="display: none;" > 
+
+**D) $n = 64$, $P(\bar{x} = 45,000)$**
+
+For a continuous distribution, the probability of the sample mean taking an exact single value is 0.  
+
+$$
+P(\bar{x} = 45,000) = 0
+$$
+
+
+  </p></div><br/>
+  </font>
+  
+
+\
+
+
+
+3. Suppose that the ages $X$ of a certain population are normally distributed, with mean $\mu = 27.0$ years, and standard deviation $\sigma = 12.0$ years, i.e., $X \to N(27,12)$.  
+
+Find the probability that the mean age of a single sample of $n = 16$ randomly selected individuals is less than 30 years.
+
+\
+
+  <font color = "red">
+  <span  onclick="toggle_visibility('q3');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+  <div id="q3" class="showanswer" style="display: none;" > 
+
+**Given:**
+
+- Population mean: $\mu = 27.0$ years  
+
+- Population standard deviation: $\sigma = 12.0$ years  
+
+- Distribution: $X \sim N(27, 12)$  
+
+- Sample size: $n = 16$  
+
+- We want: $P(\bar{x} < 30)$  
+
+**Step 1: Distribution of the sample mean**
+
+The sample mean $\bar{x}$ follows a normal distribution with:
+$$
+\mu_{\bar{x}} = \mu = 27.0
+$$
+$$
+\sigma_{\bar{x}} = \frac{\sigma}{\sqrt{n}} = \frac{12}{\sqrt{16}} = \frac{12}{4} = 3
+$$
+
+So:  
+$$
+\bar{x} \sim N(27, 3)
+$$
+
+**Step 2: Standardize**
+
+We compute the $z$-score for $\bar{x} = 30$:
+
+$$
+z = \frac{\bar{x} - \mu_{\bar{x}}}{\sigma_{\bar{x}}} = \frac{30 - 27}{3} = \frac{3}{3} = 1
+$$
+
+
+**Step 3: Find probability using standard normal table**
+
+We need $P(\bar{x} < 30) = P(Z < 1)$.
+
+From the $z$-table:  
+
+$$
+P(Z < 1) \approx 0.8413
+$$
+
+**Answer**
+
+The probability that the mean age of a sample of $n = 16$ individuals is less than 30 years is approximately:
+
+$$
+P(\bar{x} < 30) \approx 0.8413
+$$
+
+  </p></div><br/>
+  </font>
+
+
+
+
+
+\
+
+
+4. Fifty-one percent of adults in the U.S. whose New Year resolved to exercise more achieved their resolution. You randomly select 65 adults in the U.S. whose resolution was to exercise more and ask each if he or she achieved that resolution. What is the probability that the sample proportion is greater than 50%?
+
+
+
+  <font color = "red">
+  <span  onclick="toggle_visibility('q4');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+  <div id="q4" class="showanswer" style="display: none;" > 
+
+**Given:**
+
+- Population proportion: $p = 0.51$ (51%)
+
+- Sample size: $n = 65$
+
+- We want: $P(\hat{p} > 0.50)$
+
+- $\hat{p}$ = sample proportion
+
+
+**Step 1: Conditions Check**
+
+We assume:
+
+1. Random sample ✓ (stated: randomly selected)
+
+2. $np = 65 \times 0.51 = 33.15 \ge 10$ ✓
+
+3. $n(1-p) = 65 \times 0.49 = 31.85 \ge 10$ ✓
+
+Thus, $\hat{p}$ is approximately normally distributed.
+
+**Step 2: Parameters for $\hat{p}$**
+
+Mean of sampling distribution:
+
+$$
+\mu_{\hat{p}} = p = 0.51
+$$
+
+Standard error:
+
+$$
+\sigma_{\hat{p}} = \sqrt{\frac{p(1-p)}{n}} = \sqrt{\frac{0.51 \times 0.49}{65}}
+$$
+
+Calculate:
+
+$$
+0.51 \times 0.49 = 0.2499
+$$
+$$
+\frac{0.2499}{65} \approx 0.0038446
+$$
+
+$$
+\sigma_{\hat{p}} = \sqrt{0.0038446} \approx 0.0620
+$$
+
+So:
+$$
+\hat{p} \sim N(0.51, 0.0620) \text{ approximately}
+$$
+
+**Step 3: Standardize for $\hat{p} = 0.50$**
+
+$$
+z = \frac{\hat{p} - p}{\sigma_{\hat{p}}} = \frac{0.50 - 0.51}{0.0620} \approx \frac{-0.01}{0.0620} \approx -0.1613
+$$
+
+**Step 4: Find probability**
+
+We want $P(\hat{p} > 0.50) = P(Z > -0.1613)$.
+
+From symmetry:
+
+$$
+P(Z > -0.1613) = P(Z < 0.1613)
+$$
+
+From $z$-table:
+
+$$
+P(Z < 0.16) \approx 0.5636
+$$
+
+Interpolating between 0.16 and 0.17:
+
+$z = 0.16 \rightarrow 0.5636$  
+
+$z = 0.17 \rightarrow 0.5675$  
+
+Difference for 0.01: 0.0039  
+
+For 0.0013 of the way: $0.0013 \times 0.0039 \approx 0.0005$  
+
+Better to use $z = 0.1613$ directly from more precise tables or technology, but here we use 0.16 as approximation:
+
+$$
+P(Z < 0.1613) \approx 0.5641
+$$
+
+**Step 5: Answer**
+
+The probability that the sample proportion is greater than 50% is approximately:
+
+$$
+P(\hat{p} > 0.50) \approx 0.5641
+$$
+
+Or roughly **0.564**.
+
+
+  </p></div><br/>
+  </font>
+
+
+
+
+
+
+
+
