@@ -706,10 +706,15 @@ b) If the factory produces 10,000 rods in a day, how many are expected to be rej
 
 <font color = "red">
 <span  onclick="toggle_visibility('q01');" class="view"><font color = "blue"><b>View Answer</b></font></span>
+
 <div id="q01" class="showanswer" style="display: none;" > 
-<img src="week04/ex01.png" alt="w04-q01" width="350" height="350"></center>
-</p></div><br/>
+<center>
+<img src="week04/ex01.png" alt="w04-q01" width="350" height="350"><br>
+<img src="week04/ISLAex01.png" alt="w04-q01" width="600" height="450">
+</center>
+</p></div>
 </font>
+
 
 
 
@@ -735,6 +740,15 @@ Let $X \sim N(500, 100^2)$.
 
 **Answer:** Minimum score needed is approximately **705**.
 
+The following ISLA output validates the above result.
+
+<center>
+<img src="week04/ISLAex02.a.png" alt="w04-q01" width="600" height="450">
+</center>
+
+
+
+
 **Part b: Percentage Between 450 and 650**
 
 1. Standardize the scores:
@@ -753,6 +767,11 @@ Let $X \sim N(500, 100^2)$.
 
 **Answer:** About **62.47%** of students score between 450 and 650.
 
+
+<center>
+<img src="week04/ISLAex02.b.png" alt="w04-q01" width="600" height="450">
+</center>
+
 </p></div><br/>
 </font>
 
@@ -760,7 +779,7 @@ Let $X \sim N(500, 100^2)$.
 
 **Exercise 3: Medicine & Blood Pressure** Systolic blood pressure for a healthy adult population is approximately normally distributed with a mean of 120 mmHg and a standard deviation of 10 mmHg. A reading above 140 mmHg is classified as Stage 1 Hypertension.
 
-a) What percentage of this healthy population would be misclassified as having hypertension based on this single measure?  
+a) What percentage of this healthy population would be mis-classified as having hypertension based on this single measure?  
 
 b) What systolic blood pressure marks the 90th percentile (i.e., only 10% of the population has a pressure higher than this value)?
 
@@ -784,6 +803,11 @@ Let $X \sim N(120, 10^2)$.
 
 **Answer:** Approximately **2.28%** would be misclassified.
 
+<center>
+<img src="week04/ISLAex03.a.png" alt="w04-q01" width="600" height="450">
+</center>
+
+
 **Part b: 90th Percentile Blood Pressure**
 
 1. Find $z$-score for 90th percentile:
@@ -797,6 +821,10 @@ $$
 $$
 
 **Answer:** The 90th percentile blood pressure is approximately **132.8 mmHg**.
+
+<center>
+<img src="week04/ISLAex03.b.png" alt="w04-q01" width="600" height="450">
+</center>
 
 </p></div><br/>
 </font>
@@ -825,6 +853,10 @@ Let $X \sim N(12, 3.5^2)$.
 
 **Answer:** Currently **80.43%** of calls meet the 15-minute goal.
 
+<center>
+<img src="week04/ISLAex04.a.png" alt="w04-q01" width="600" height="450">
+</center>
+
 **Part b: Time for Bonus Qualification**
 
 1. "Faster than 90% of peers" means at the 10th percentile.
@@ -835,6 +867,10 @@ Let $X \sim N(12, 3.5^2)$.
    $$x = 12 + (-1.282)(3.5) \approx 12 - 4.487 = 7.513$$
 
 **Answer:** A representative must resolve calls in less than **7.5 minutes** to earn the bonus.
+
+<center>
+<img src="week04/ISLAex04.b.png" alt="w04-q01" width="600" height="450">
+</center>
 
 </p></div><br/>
 </font>
